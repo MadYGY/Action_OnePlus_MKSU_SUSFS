@@ -9,7 +9,7 @@ on:
       FEIL:
         description: "配置文件"
         required: true
-        default: 'oneplus_13'
+        default: 'JiuGeFaCai_oneplus_13_v'
       CPUD:
         description: "处理器代号"
         required: true
@@ -247,7 +247,7 @@ jobs:
       - name: Build kernel
         run: |
           cd kernel_workspace
-          LTO=thin ./kernel_platform/oplus/build/oplus_build_kernel.sh ${{ github.event.inputs.CPUD }} perf
+          LTO=thin ./kernel_platform/oplus/build/oplus_build_kernel.sh ${{ github.event.inputs.CPUD }} gki
          
       - name: Make AnyKernel3
         run: |
